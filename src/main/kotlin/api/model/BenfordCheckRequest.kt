@@ -3,7 +3,7 @@ package com.johan.api.model
 import kotlinx.serialization.Serializable
 
 @Serializable
-data class BenfordRequest(
-    val input: String,
+data class BenfordCheckRequest(
+    val text: String,
     val significanceLevel: Double
 )

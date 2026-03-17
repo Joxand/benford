@@ -28,4 +28,8 @@ dependencies {
     testImplementation(libs.ktor.server.test.host)
     testImplementation(libs.kotlin.test.junit)
     testImplementation(libs.ktor.client.content.negotiation)
+    testImplementation("org.junit.jupiter:junit-jupiter-params")
+    testImplementation(libs.kotlin.test.junit)
+    testImplementation(libs.junit.jupiter)
+    testImplementation(libs.junit.jupiter.params)
 }

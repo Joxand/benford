@@ -1,6 +1,8 @@
 package com.johan
 
-import com.johan.api.routes.configureBenfordRoutes
+import com.johan.api.route.configureErrorHandling
+import com.johan.api.route.configureRoutes
+import com.johan.domain.service.BenfordService
 import io.ktor.server.application.*
 
 fun main(args: Array<String>) {
@@ -8,6 +10,7 @@ fun main(args: Array<String>) {
 }
 
 fun Application.module() {
+    configureErrorHandling()
     configureSerialization()
-    configureBenfordRoutes()
+    configureRoutes(BenfordService())
 }
