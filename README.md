@@ -1,7 +1,5 @@
 # benford
 
-This project was created using the [Ktor Project Generator](https://start.ktor.io).
-
 ## Building & Running
 
 To build or run the project, use one of the following tasks:
@@ -23,11 +21,22 @@ If the server starts successfully, you'll see the following output:
 2024-12-04 14:32:45.682 [main] INFO  Application - Responding at http://0.0.0.0:8080
 ```
 
+Make a request:
+```shell
+curl -X POST http://localhost:8080/api/v1/benford/check \
+  -H "Content-Type: application/json" \
+  -d '{
+    "text": "Invoice 123.45 payment 45 refund 302 amount 987",
+    "significanceLevel": 0.05
+  }'
+```
+
 ## TODO
 
-- Requirements?
-- Structure
+- Requirements review
+- Structure sync
 - Monitoring
 - Api documentation
-- Security
-- Environments
+- Api security
+- Configuration from environment
+- Build/deploy
